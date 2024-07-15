@@ -13,7 +13,8 @@ module.exports = {
   },
   mode: 'production',
   devServer: {
-    contentBase: './dist',
+    static: './dist',
+    open: true,
   },
   module: {
     rules: [
