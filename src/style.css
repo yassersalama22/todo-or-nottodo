@@ -61,6 +61,9 @@ body {
   
   .todo-card h3 {
     margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .todo-card ul {
@@ -69,19 +72,23 @@ body {
   }
   
   .todo-card ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid #eee;
     padding: 0.5rem 0;
   }
   
-  .todo-card ul li:last-child {
-    border-bottom: none;
+  .todo-card ul li .item-info {
+    flex-grow: 1;
+    margin-left: 0.5rem;
   }
   
-  .todo-card ul li.completed {
+  .todo-card ul li.completed .item-info {
     text-decoration: line-through;
     color: #888;
   }
-
+  
   .add-item-button {
     background-color: #28a745;
     color: #fff;
@@ -91,25 +98,72 @@ body {
     cursor: pointer;
     transition: background-color 0.3s;
   }
-
+  
   .add-item-button:hover {
     background-color: #218838;
   }
-
-.delete-item-button {
+  
+  .delete-item-button {
     background-color: #dc3545;
-    color:#fff;
+    color: #fff;
     border: none;
     padding: 0.5rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.delete-item-button:hover {
+  }
+  
+  .delete-item-button:hover {
     background-color: #c82333;
-}
-
-.item-checkbox {
+  }
+  
+  .item-checkbox {
     margin-right: 1rem;
-}
+  }
+  
+  .form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    margin-top: 0;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container form div {
+    margin-bottom: 1rem;
+  }
+  
+  .form-container form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .form-container form input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .form-container form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .form-container form button:hover {
+    background-color: #0056b3;
+  }
