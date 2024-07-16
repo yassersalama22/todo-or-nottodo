@@ -1,14 +1,115 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .branding h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .nav ul {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+  }
+  
+  .nav ul li {
+    margin-left: 1rem;
+  }
+  
+  .nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  .main-content {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .todo-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: calc(33% - 2rem);
+    box-sizing: border-box;
+  }
+  
+  .todo-card h3 {
+    margin-top: 0;
+  }
+  
+  .todo-card ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-card ul li {
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+  }
+  
+  .todo-card ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-card ul li.completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+
+  .add-item-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .add-item-button:hover {
+    background-color: #218838;
+  }
+
+.delete-item-button {
+    background-color: #dc3545;
+    color:#fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#app {
-    text-align: center;
+.delete-item-button:hover {
+    background-color: #c82333;
+}
+
+.item-checkbox {
+    margin-right: 1rem;
 }
