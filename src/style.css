@@ -43,7 +43,7 @@ body {
   }
   
   .main-content {
-    padding: 2rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -90,6 +90,13 @@ body {
   .todo-card ul li.completed .item-info {
     text-decoration: line-through;
     color: #888;
+  }
+  
+  .add-item-button, .delete-item-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
   
   .add-item-button {
