@@ -105,7 +105,7 @@ function showAddItemForm(listId) {
     const itemDescription = document.getElementById('item-description').value;
     const itemDueDate = document.getElementById('item-due-date').value;
 
-    const todoList = TodoList.loadFromLocalStorage(`todo_${listId}`);
+    const todoList = TodoList.loadFromLocalStorage(listId);
     const newItem = new TodoListItem(itemTitle, itemDescription, itemDueDate);
     todoList.addItem(newItem);
     todoList.saveToLocalStorage();
