@@ -80,6 +80,7 @@ body {
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 0.5rem 0;
+    margin-bottom: 0.5rem; /* Add space between items */
   }
   
   .todo-card ul li .item-info {
@@ -114,10 +115,14 @@ body {
   }
   
   .delete-item-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
     background-color: #dc3545;
     color: #fff;
     border: none;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -129,10 +134,12 @@ body {
   
   .item-checkbox {
     margin-right: 1rem;
+    margin-left: 0;
+    align-self: flex-start; /* Align the checkbox with the top of the item */
   }
   
   .form-container {
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     background-color: #fff;
     padding: 2rem;
@@ -166,6 +173,8 @@ body {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .form-container form button {
@@ -176,6 +185,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    align-self: flex-start;
   }
   
   .form-container form button:hover {
