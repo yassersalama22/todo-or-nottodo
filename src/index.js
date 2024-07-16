@@ -68,6 +68,7 @@ function showAddItemForm(listId) {
   const mainContent = document.getElementById('main-content');
   mainContent.innerHTML = `
     <div class="form-container">
+      <button class="close-button" id="close-add-item">Close</button>
       <h2>Add Item</h2>
       <form id="add-item-form">
         <div>
@@ -88,6 +89,9 @@ function showAddItemForm(listId) {
       </form>
     </div>
   `;
+
+  // Add event listener to close button
+  document.getElementById('close-add-item').addEventListener('click', showAllTodos);
 
   // Handle form submission
   const form = document.getElementById('add-item-form');
@@ -112,6 +116,7 @@ function showAddTodoForm() {
   const mainContent = document.getElementById('main-content');
   mainContent.innerHTML = `
     <div class="form-container">
+      <button class="close-button" id="close-add-todo">Close</button>
       <h2>Add Todo</h2>
       <form id="add-todo-form">
         <div>
@@ -124,6 +129,9 @@ function showAddTodoForm() {
       </form>
     </div>
   `;
+
+  // Add event listener to close button
+  document.getElementById('close-add-todo').addEventListener('click', showAllTodos);
 
   // Handle form submission
   const form = document.getElementById('add-todo-form');
