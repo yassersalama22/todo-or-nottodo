@@ -133,6 +133,9 @@ body {
   
   .form-container h2 {
     margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   .form-container form {
@@ -170,9 +173,6 @@ body {
   }
   
   .close-button {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
     background-color: #dc3545;
     color: #fff;
     border: none;
