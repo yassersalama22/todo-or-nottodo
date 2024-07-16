@@ -185,3 +185,7 @@ body {
   .close-button:hover {
     background-color: #c82333;
   }
+  
+  button i {
+    margin-right: 0.5rem;
+  }

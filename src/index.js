@@ -1,4 +1,5 @@
 import './style.css';
+import '@fortawesome/fontawesome-free/css/all.css'; // Import Font Awesome CSS
 import TodoList from './components/TodoList';
 import TodoListItem from './components/TodoListItem';
 
@@ -16,7 +17,7 @@ function showAllTodos() {
     listTitle.textContent = list.name;
 
     const addItemButton = document.createElement('button');
-    addItemButton.textContent = 'Add Item';
+    addItemButton.innerHTML = '<i class="fas fa-plus"></i> Add Item';
     addItemButton.className = 'add-item-button';
     addItemButton.addEventListener('click', () => showAddItemForm(list.id));
 
@@ -44,7 +45,7 @@ function showAllTodos() {
       itemInfo.textContent = `${item.title}: ${item.description} (Due: ${item.dueDate})`;
 
       const deleteButton = document.createElement('button');
-      deleteButton.textContent = 'Delete';
+      deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i> Delete';
       deleteButton.className = 'delete-item-button';
       deleteButton.addEventListener('click', () => {
         list.removeItem(index);
@@ -70,7 +71,7 @@ function showAddItemForm(listId) {
     <div class="form-container">
       <h2>
         Add Item
-        <button class="close-button" id="close-add-item">Close</button>
+        <button class="close-button" id="close-add-item"><i class="fas fa-times"></i> Close</button>
       </h2>
       <form id="add-item-form">
         <div>
@@ -86,7 +87,7 @@ function showAddItemForm(listId) {
           <input type="date" id="item-due-date" name="item-due-date" required>
         </div>
         <div>
-          <button type="submit">Add Item</button>
+          <button type="submit"><i class="fas fa-save"></i> Add Item</button>
         </div>
       </form>
     </div>
@@ -120,7 +121,7 @@ function showAddTodoForm() {
     <div class="form-container">
       <h2>
         Add Todo
-        <button class="close-button" id="close-add-todo">Close</button>
+        <button class="close-button" id="close-add-todo"><i class="fas fa-times"></i> Close</button>
       </h2>
       <form id="add-todo-form">
         <div>
@@ -128,7 +129,7 @@ function showAddTodoForm() {
           <input type="text" id="list-name" name="list-name" required>
         </div>
         <div>
-          <button type="submit">Add Todo</button>
+          <button type="submit"><i class="fas fa-save"></i> Add Todo</button>
         </div>
       </form>
     </div>
